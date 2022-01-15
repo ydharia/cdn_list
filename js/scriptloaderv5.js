@@ -45,17 +45,8 @@ function loadScript(url, callback, googleads=false){
 //     });
 // },100);
 setTimeout(function(){
-    loadScript("https://www.googletagmanager.com/gtag/js?id=UA-133433063-2", function(){
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-133433063-2');
-    });
-    loadScript("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function(){
-        [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        });
-    }, true);
+    // loadScript("https://www.googletagmanager.com/gtag/js?id=UA-133433063-2", function(){});
+    // loadScript("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function(){}, true);
 },5000);
 // setTimeout(function(){
     // loadStyle(userbase_url+"libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css", function(){});
