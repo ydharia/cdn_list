@@ -45,18 +45,26 @@ function loadScript(url, callback, googleads=false){
 //     });
 // },100);
 setTimeout(function(){
-    // loadScript("https://www.googletagmanager.com/gtag/js?id=UA-133433063-2", function(){});
-    // loadScript("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function(){}, true);
-},5000);
+    loadScript("https://www.googletagmanager.com/gtag/js?id=UA-133433063-2", function(){
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-133433063-2');
+    });
+    loadScript("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function(){
+        [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        });
+    }, true);
+},10000);
 // setTimeout(function(){
     // loadStyle(userbase_url+"libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css", function(){});
         // loadStyle(userbase_url+"css/bootstrap.min.css", function(){
+            loadStyle("https://cdn.jsdelivr.net/gh/ydharia/cdn_list@main/css/icons.min.css", function(){});
             loadStyle("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap", function(){
-                loadStyle("https://cdn.jsdelivr.net/gh/ydharia/cdn_list@main/css/icons.min.css", function(){
-                    // loadStyle(userbase_url+"css/app.css", function(){
-                        document.getElementById("init-style").outerHTML=''; /* Remove initial styles from your page */
-                    // });	
-                });	
+                // loadStyle(userbase_url+"css/app.css", function(){
+                    document.getElementById("init-style").outerHTML=''; /* Remove initial styles from your page */
+                // });	
             });	
         // });
     // });	
