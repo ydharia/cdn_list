@@ -52,7 +52,7 @@ setTimeout(function(){
     // loadStyle(userbase_url+"libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css", function(){});
         // loadStyle(userbase_url+"css/bootstrap.min.css", function(){
             loadStyle("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap", function(){
-                loadStyle(userbase_url+"css/icons.min.css", function(){
+                loadStyle("https://cdn.jsdelivr.net/gh/ydharia/cdn_list@main/css/icons.min.css", function(){
                     // loadStyle(userbase_url+"css/app.css", function(){
                         document.getElementById("init-style").outerHTML=''; /* Remove initial styles from your page */
                     // });	
@@ -74,7 +74,7 @@ setTimeout(function(){
                                 if (typeof numberpage !== 'undefined') {
                                     if (numberpage) {
                                         loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js", function(){
-                                            loadScript(userbase_url+"js/number-page.js?v=1", function(){});
+                                            loadScript("https://cdn.jsdelivr.net/gh/ydharia/cdn_list@main/js/number-page.js?v=1", function(){});
                                         });
                                     }
                                 }
